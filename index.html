@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme1">
+
+<div class="app">
+
+  <div class="calculator">
+
+    <!-- Top Icons -->
+    <div class="top-icons">
+      <span onclick="changeTheme()">🎨</span>
+      <span onclick="toggleHistory()">📜</span>
+    </div>
+
+    <input type="text" id="display" readonly>
+
+    <div class="buttons">
+      <button onclick="clearDisplay()" class="op">C</button>
+      <button onclick="deleteLast()" class="op">⌫</button>
+      <button onclick="append('%')" class="op">%</button>
+      <button onclick="append('/')" class="op">÷</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')" class="op">×</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')" class="op">−</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')" class="op">+</button>
+
+      <button onclick="append('0')" class="zero">0</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="calculate()" class="equal">=</button>
+    </div>
+
+  </div>
+
+  <!-- History -->
+  <div class="history" id="historyBox">
+
+    <!-- Close Button (Mobile only) -->
+    <div class="history-header">
+      <h3>History</h3>
+      <span class="close-btn" onclick="closeHistory()">✖</span>
+    </div>
+
+    <ul id="historyList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
